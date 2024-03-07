@@ -12,11 +12,8 @@ const TrendingCoins = () => {
       if (res.data.coins.length > 3) {
         res = res.data.coins.slice(0, 3);
       }
-      console.log("res");
-      console.log(res);
       setFetchedData(res);
     };
-    console.log(fetchedData);
     fetchData();
   }, []);
   return (

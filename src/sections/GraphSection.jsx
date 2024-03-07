@@ -1,9 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import TradingViewWidget from "../components/TradingViewWidget";
+import { useSearchParams } from "react-router-dom";
 
 const GraphSection = () => {
   const [fetchedData, setFetchedData] = useState("");
+  const [searchParams] = useSearchParams();
+  console.log(searchParams);
   useEffect(() => {
     async function fetchData() {
       const res = await axios.get(
